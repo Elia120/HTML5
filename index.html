@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-messages.min.js"></script>
+    <style>
+        body {
+            padding: 50px;
+        }
+        h1 {
+            text-align: center;
+        }
+        h2{
+            text-align:center;
+            padding-bottom:50px;
+        }
+        .card{
+            margin:10px;
+        }
+        .stars {
+            padding-bottom: 10%;
+        }
+        img{
+            height: 230px;
+            width: auto;
+        }
+        .starshover {
+            color: #ffc100;
+        }
+        .starsclick {
+            color: #ffc100;
+        }
+        .card-deck {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-gap: .5rem;
+        }
+.card{
+opacity:0.85
+}
+.card:hover{
+opacity:1
+}
+
+
+    </style>
+    
+    <title>Feedback</title>
+</head>
+<body>
+    <h1>Welcome to my feedback page for new Computers</h1>
+    <h2>Please click on any star to rate or write a review by clicking on review</h2>
+    <div class="card-deck">
+        <div class="card text-center bg-light mb-3" style="width: 18rem;">
+            <img class="card-img-top" src="Lenovo.jpg" alt="Lenovo">
+            <div class="card-body">
+                <h5 class="card-title">Lenovo</h5>
+                <div class="stars"><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i></div>
+                <a href="#" id="1" class="btn btn-primary">Review</a>
+            </div>
+        </div>
+        <div class="card text-center bg-light mb-3" style="width: 18rem;">
+            <img class="card-img-top" src="Acer.jpg" alt="Acer">
+            <div class="card-body">
+                <h5 class="card-title">Acer</h5>
+                <div class="stars"><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i></div>
+                <a href="#" id="2" class="btn btn-primary">Review</a>
+            </div>
+        </div>
+        <div class="card text-center bg-light mb-3" style="width: 18rem;">
+            <img class="card-img-top" src="Apple.jpg" alt="Apple">
+            <div class="card-body">
+                <h5 class="card-title">Apple</h5>
+                <div class="stars"><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i></div>
+                <a href="#" class="btn btn-primary">Review</a>
+            </div>
+        </div>
+        <div class="card text-center bg-light mb-3" style="width: 18rem;">
+            <img class="card-img-top" src="ASUS.jpg" alt="ASUS">
+            <div class="card-body">
+                <h5 class="card-title">ASUS</h5>
+                <div class="stars"><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i></div>
+                <a href="#" class="btn btn-primary">Review</a>
+            </div>
+        </div>
+        <div class="card text-center bg-light mb-3" style="width: 18rem;">
+            <img class="card-img-top" src="CHUWI.jpg" alt="CHUWI">
+            <div class="card-body">
+                <h5 class="card-title">CHUWI</h5>
+                <div class="stars"><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i></div>
+                <a href="#" class="btn btn-primary">Review</a>
+            </div>
+        </div>
+        <div class="card text-center bg-light mb-3" style="width: 18rem;">
+            <img class="card-img-top" src="Dell.jpg" alt="Dell">
+            <div class="card-body">
+                <h5 class="card-title">Dell</h5>
+                <div class="stars"><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i></div>
+                <a href="#" class="btn btn-primary">Review</a>
+            </div>
+        </div>
+        <div class="card text-center bg-light mb-3" style="width: 18rem;">
+            <img class="card-img-top" src="HP.jpg" alt="HP">
+            <div class="card-body">
+                <h5 class="card-title">HP</h5>
+                <div class="stars"><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i></div>
+                <a href="#" class="btn btn-primary">Review</a>
+            </div>
+        </div>
+        <div class="card text-center bg-light mb-3" style="width: 18rem;">
+            <img class="card-img-top" src="Jumper.jpg" alt="Jumper">
+            <div class="card-body">
+                <h5 class="card-title">Jumper</h5>
+                <div class="stars"><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i></div>
+                <a href="#" class="btn btn-primary">Review</a>
+            </div>
+        </div>
+        <div class="card text-center bg-light mb-3" style="width: 18rem;">
+            <img class="card-img-top" src="Microsoft.jpg" alt="Microsoft">
+            <div class="card-body">
+                <h5 class="card-title">Microsoft</h5>
+                <div class="stars"><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i></div>
+                <a href="#" class="btn btn-primary">Review</a>
+            </div>
+        </div>
+        <div class="card text-center bg-light mb-3" style="width: 18rem;">
+            <img class="card-img-top" src="Razer.jpg" alt="Razer">
+            <div class="card-body">
+                <h5 class="card-title">Razer</h5>
+                <div class="stars"><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i></div>
+                <a href="#" class="btn btn-primary">Review</a>
+            </div>
+        </div>
+        <div class="card text-center bg-light mb-3" style="width: 18rem;">
+            <img class="card-img-top" src="Samsung.jpg" alt="Samsung">
+            <div class="card-body">
+                <h5 class="card-title">Samsung</h5>
+                <div class="stars"><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i></div>
+                <a href="#" class="btn btn-primary">Review</a>
+            </div>
+        </div>
+        <div class="card text-center bg-light mb-3" style="width: 18rem;">
+            <img class="card-img-top" src="XIDU.jpg" alt="XIDU">
+            <div class="card-body">
+                <h5 class="card-title">XIDU</h5>
+                <div class="stars"><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i></div>
+                <a href="#" class="btn btn-primary">Review</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+	
+            $("i").hover(
+                function () {
+                    $(this).addClass("starshover");
+                    $(this).prevAll().addClass("starshover");
+                }, function () {
+                    $(this).removeClass("starshover");
+                    $(this).prevAll().removeClass("starshover");
+                });
+            $("i").click(function () {
+                $(this).nextAll().removeClass("starsclick");
+                $(this).addClass("starsclick");
+                $(this).prevAll().addClass("starsclick");
+                var x = $(this).prevAll().length + 1;
+            });
+            $("a").click(function myFunction() {
+                
+                var x = $(this).siblings("h5").text();
+                var myWindow = window.open("review.html?name="+x, "_blank", "width=700,height=700");
+            });
+
+        });
+        
+    </script>
+</body>
