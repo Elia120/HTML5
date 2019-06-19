@@ -12,44 +12,79 @@
         body {
             padding: 50px;
         }
+
         h1 {
             text-align: center;
         }
-        h2{
-            text-align:center;
-            padding-bottom:50px;
+
+        h2 {
+            text-align: center;
+            padding-bottom: 50px;
         }
-        .card{
-            margin:10px;
+
+        .card {
+            margin: 10px;
         }
+
         .stars {
             padding-bottom: 10%;
         }
-        img{
+
+        img {
             height: 230px;
             width: auto;
         }
+
         .starshover {
             color: #ffc100;
         }
+
         .starsclick {
             color: #ffc100;
         }
+
         .card-deck {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             grid-gap: .5rem;
         }
-.card{
-opacity:0.85
-}
-.card:hover{
-opacity:1
-}
 
+        .card {
+            opacity: 0.85
+        }
 
+            .card:hover {
+                opacity: 1
+            }
+
+        #overlay {
+            position: fixed;
+            display: none;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 2;
+        }
+        .review {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /*font-size: 50px;
+            color: white;*/
+            transform: translate(-50%,-50%);
+        }
+        .review2 {
+            
+            margin: 0 auto;
+            width: 80%;
+      
+        }
     </style>
-    
+
     <title>Feedback</title>
 </head>
 <body>
@@ -153,9 +188,42 @@ opacity:1
             </div>
         </div>
     </div>
+    <!--rewiew section-->
+    <div id="overlay">
+    <div class="container review bg-light">  
+        <div class="card text-center bg-light mb-3 review2" style="width: 18rem;">
+            <img class="card-img-top reviewsrc" src="acer.jpg" style=" height: 200px;   width: auto;" alt="Lenovo">
+            <div class="card-body">
+                <h5 id="cardtitle" class="card-title"></h5>
+                <div class="stars"><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i></div>
+            </div>
+        </div>
+        <form id="reviwform" action="/action_page.php">
+            <div class="form-group">
+                <label for="email">Name:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter Name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Surname:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter Surname" name="sname">
+            </div>
+            <div class="form-group">
+                <label for="pwd">E-Mail:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter E-Mail" name="email">
+            </div>
+            <div class="form-group">
+                <label for="review">Review:</label>
+                <textarea class="form-control" rows="7" id="review"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+        <br />
+    </div>
+    </div>
     <script>
         $(document).ready(function () {
-		"use strict"
+            "use strict"
             $("i").hover(
                 function () {
                     $(this).addClass("starshover");
@@ -171,12 +239,34 @@ opacity:1
                 var x = $(this).prevAll().length + 1;
             });
             $("a").click(function myFunction() {
-                
-                var x = $(this).siblings("h5").text();
-                var myWindow = window.open("review.html?name="+x, "_blank", "width=700,height=700");
-            });
 
+                var x = $(this).siblings("h5").text();
+                $("#Header").text("Plaese write a full review on " + x);
+                $("#cardtitle").text(x);
+                $(".reviewsrc").attr("src", x + ".jpg");
+                $("#overlay").attr("style", "display: block;");
+                //var myWindow = window.open("review.html?name=" + x, "_blank", "width=700,height=700");
+            });
+            $("#reviwform").submit(function (e) {
+
+                e.preventDefault();
+
+                var form = $(this);
+                var url = form.attr('action');
+
+                $.ajax({
+                    type: "POST",
+                    url: rewiewforcomputers.html,
+                    data: form.serialize(), 
+                    success: function (data) {
+                        alert(data); 
+                    }
+                });
+                $(this).attr("style", "display: none;");
+
+            });
         });
-        
+
     </script>
 </body>
+</html>
